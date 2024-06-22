@@ -21,7 +21,7 @@ def main():
             for file in files:
                 print(f"├── {file}")
         else:
-            print(files)  # Error message
+            print(files)
     else:
         print(f"Directory {directory} is not valid")
 
