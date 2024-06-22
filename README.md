@@ -60,7 +60,7 @@ Using the **Component-Based Architecture**, the project is structured as follows
 │   ├── navigation
 │   ├── search
 │   ├── ui
-│   │   ├── cli_controller
+│   │   └── cli_controller
 │   ├── shared
 │   │   ├── config
 │   │   └── utils
