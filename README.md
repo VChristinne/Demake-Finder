@@ -16,6 +16,7 @@ Key features:
 - **Delete** files and directories
 - **Search** for files and directories
 
+
 ## ⚙️ Installation
 1. Clone the repository
 2. Run the following command to build the Docker image:
@@ -35,6 +36,26 @@ docker stop run-df
 ```
 docker rm run-df
 ```
+
+
+## 🗂️ Project Structure
+```
+├── Dockerfile
+├── LICENSE
+├── README.md
+├── components
+│   ├── file_management
+│   │   ├── copy
+│   │   ├── delete
+│   │   ├── list
+│   │   └── move 
+│   ├── navigation
+│   ├── search
+│   └── ui
+│   └── shared
+└── main.py
+```
+
 
 ## 📑 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
