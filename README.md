@@ -59,8 +59,11 @@ Using the **Component-Based Architecture**, the project is structured as follows
 │   │   └── move 
 │   ├── navigation
 │   ├── search
-│   └── ui
-│   └── shared
+│   ├── ui
+│   │   ├── cli_controller
+│   ├── shared
+│   │   ├── config
+│   │   └── utils
 └── entrypoint.py
 ```
 
