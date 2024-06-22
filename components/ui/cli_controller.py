@@ -12,9 +12,8 @@ def main():
     if is_valid_directory(directory):
         files = list_files(directory)
         if isinstance(files, list):
-            print("Files: ")
             for file in files:
-                print(file)
+                print(f"├── {file}")
         else:
             print(files)  # Error message
     else:
