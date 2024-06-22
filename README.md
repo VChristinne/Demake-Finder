@@ -2,7 +2,7 @@
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://https://docker.com/)
+[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://docker.com/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 
@@ -15,7 +15,7 @@ Key features:
 - **Create** new files and directories
 - **Delete** files and directories
 - **Search** for files and directories
-
+- **Copy** files and directories
 
 ## ⚙️ Installation
 1. Clone the repository
@@ -39,6 +39,7 @@ docker rm run-df
 
 
 ## 🗂️ Project Structure
+Using the **Component-Based Architecture**, the project is structured as follows:
 ```
 ├── Dockerfile
 ├── LICENSE
@@ -55,7 +56,6 @@ docker rm run-df
 │   └── shared
 └── entrypoint.py
 ```
-
 
 ## 📑 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
