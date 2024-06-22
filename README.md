@@ -11,7 +11,7 @@ This project is a demake for macOS Finder in CLI.
 
 Key features:
 - **Navigate** through files and directories
-- **Open** files
+- **Open** directories
 - **Create** new files and directories
 - **Delete** files and directories
 - **Search** for files and directories
