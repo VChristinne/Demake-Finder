@@ -37,6 +37,13 @@ docker stop run-df
 docker rm run-df
 ```
 
+## 📝 Usage
+- **List files and directories**: `entrypoint.py [-h][-s][-d][-v] <directory_path>`
+  - Optional arguments:
+    - `-h` or `--help`: Display the help message
+    - `-s` or `--size`: Display the size of the files and directories
+    - `-d` or `--date`: Display the date of the files and directories
+    - `-v` or `--verbose`: Display the size and date of the files and directories
 
 ## 🗂️ Project Structure
 Using the **Component-Based Architecture**, the project is structured as follows:
