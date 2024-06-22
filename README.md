@@ -53,7 +53,7 @@ docker rm run-df
 │   ├── search
 │   └── ui
 │   └── shared
-└── main.py
+└── entrypoint.py
 ```
 
 
