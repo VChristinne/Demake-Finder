@@ -19,29 +19,24 @@ Key features:
 
 ## ⚙️ Installation
 1. Clone the repository
-2. Run the following command to build the Docker image:
 ```
-docker build -t demake-finder .
+git clone https://github.com/VChristinne/demake-finder.git
 ```
-3. Run the following command to start the Docker container:
+2. Navigate to the project directory
 ```
-docker run -it --name run-df demake-finder <directory_path> <optional_arguments>
+cd demake-finder
 ```
-OR run the following command to start the Docker container and remove it after it stops:
+3. Make the `run.sh` script executable (docker installation)
 ```
-docker run -it --rm --name run-df demake-finder <directory_path> <optional_arguments>
+chmod +x run.sh
 ```
-4. To stop the container, run the following command:
+4. Run the script to start the application
 ```
-docker stop run-df
-```
-5. To remove the container, run the following command:
-```
-docker rm run-df
+./run.sh <directory_path> [-h][-s][-d][-v]
 ```
 
 ## 📝 Usage
-- **List files and directories**: `entrypoint.py [-h][-s][-d][-v] <directory_path>`
+- **List files and directories**: `entrypoint.py <directory_path> [-h][-s][-d][-v]`
   - Optional arguments:
     - `-h` or `--help`: Display the help message
     - `-s` or `--size`: Display the size of the files and directories
@@ -67,6 +62,7 @@ Using the **Component-Based Architecture**, the project is structured as follows
 │   ├── shared
 │   │   ├── config
 │   │   └── utils
+├── run.sh
 └── entrypoint.py
 ```
 
