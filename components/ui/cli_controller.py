@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from components.file_management.list.list_service import list_files, show_size, list_date
+from components.file_management.list.list_service import list_files, list_size, list_date
 from components.file_management.list.list_validator import is_valid_directory
 
 def main():
@@ -18,7 +18,7 @@ def main():
         if args.list:
             list_files(directory)
         elif args.size:
-            show_size(directory)
+            list_size(directory)
         elif args.date:
             list_date(directory)
     else:

@@ -61,13 +61,14 @@ def list_size(directory):
     :param directory:
     :return: list of files with sizes
     """
-    files = list_files(directory)
-    if isinstance(files, list):
-        files_with_size = []
-        for file in files:
-            file_path = os.path.join(directory, file)
-            size = os.path.getsize(file_path)
-            files_with_size.append(f"{file} ({convert_size(size)})")
-        return files_with_size
-    else:
-        return files
+    try:
+        directory = pathlib.Path(directory)
+        for file in directory.iterdir():
+            size = os.path.getsize(file)
+            print(f"├── {file.name} ({convert_size(size)})")
+    except ex.FileNotFoundError:
+        return f"Directory {directory} not found"
+    except ex.PermissionDeniedError:
+        return f"Permission denied for directory {directory}"
+    except Exception as e:
+        return f"Error: {e}"
