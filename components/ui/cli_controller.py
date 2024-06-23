@@ -1,4 +1,5 @@
 import argparse
+import sys
 
 from components.file_management.list.list_service import list_files, show_size
 from components.file_management.list.list_validator import is_valid_directory
@@ -24,6 +25,7 @@ def main():
             print(files)
     else:
         print(f"Directory {directory} is not valid")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
