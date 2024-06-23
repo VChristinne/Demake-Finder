@@ -34,6 +34,10 @@ chmod +x run.sh
 ```
 ./run.sh <directory_path> [-h][-s][-d][-v]
 ```
+5. To stop and remove the container, run the following command
+```
+docker stop run-df && docker rm run-df
+```
 
 ## 📝 Usage
 - **List files and directories**: `entrypoint.py <directory_path> [-h][-s][-d][-v]`
