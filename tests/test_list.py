@@ -5,11 +5,15 @@ from components.ui.cli_controller import main
 
 class TestList:
     def test_list_files(self):
-        sys.argv = ["../entrypoint.py", "/users/christinne/developer"]
+        sys.argv = ["../entrypoint.py", "/users/christinne/developer", "-l"]
         main()
 
     def test_list_size(self):
         sys.argv = ["../entrypoint.py", "/users/christinne/developer", "-s"]
+        main()
+
+    def test_list_date(self):
+        sys.argv = ["../entrypoint.py", "/users/christinne/developer", "-d"]
         main()
 
 
