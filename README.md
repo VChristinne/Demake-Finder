@@ -25,14 +25,17 @@ docker build -t demake-finder .
 ```
 3. Run the following command to start the Docker container:
 ```
-docker run -it --name run-df demake-finder
+docker run -it --name run-df demake-finder <directory_path> <optional_arguments>
 ```
-4. You can now use the demake Finder in the CLI.
-5. To stop the container, run the following command:
+OR run the following command to start the Docker container and remove it after it stops:
+```
+docker run -it --rm --name run-df demake-finder <directory_path> <optional_arguments>
+```
+4. To stop the container, run the following command:
 ```
 docker stop run-df
 ```
-6. To remove the container, run the following command:
+5. To remove the container, run the following command:
 ```
 docker rm run-df
 ```
