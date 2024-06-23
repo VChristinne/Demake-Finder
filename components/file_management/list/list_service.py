@@ -1,5 +1,8 @@
 import math
 import os
+import pathlib
+
+import shared.utils.exceptions as ex
 
 def list_files(directory):
     """
@@ -8,10 +11,32 @@ def list_files(directory):
     :return: list of files
     """
     try:
-        return os.listdir(directory)
-    except FileNotFoundError:
+        directory = pathlib.Path(directory)
+        for file in directory.iterdir():
+            print(f"├── {file.name}")
+    except ex.FileNotFoundError:
         return f"Directory {directory} not found"
-    except PermissionError:
+    except ex.PermissionDeniedError:
+        return f"Permission denied for directory {directory}"
+    except Exception as e:
+        return f"Error: {e}"
+
+def list_date(directory):
+    """
+    List all files in a directory with their dates
+    :param directory:
+    :return: list of files with dates
+    """
+    import datetime
+    try:
+        directory = pathlib.Path(directory)
+        for file in directory.iterdir():
+            dt = datetime.datetime.fromtimestamp(file.stat().st_birthtime)
+            dt_strf = dt.strftime("%d/%m/%Y %H:%M %p")
+            print(f"├── {file.name} ({dt_strf})")
+    except ex.FileNotFoundError:
+        return f"Directory {directory} not found"
+    except ex.PermissionDeniedError:
         return f"Permission denied for directory {directory}"
     except Exception as e:
         return f"Error: {e}"
