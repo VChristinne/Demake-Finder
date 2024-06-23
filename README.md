@@ -32,7 +32,7 @@ chmod +x run.sh
 ```
 4. Run the script to start the application
 ```
-./run.sh <directory_path> [-h][-s][-d][-v]
+./run.sh <directory_path> [-h][-l][-s][-d][-v]
 ```
 5. To stop and remove the container, run the following command
 ```
@@ -40,9 +40,10 @@ docker stop run-df && docker rm run-df
 ```
 
 ## 📝 Usage
-- **List files and directories**: `entrypoint.py <directory_path> [-h][-s][-d][-v]`
+- **List files and directories**: `entrypoint.py <directory_path> [-h][-l][-s][-d][-v]`
   - Optional arguments:
     - `-h` or `--help`: Display the help message
+    - `-l` or `--list`: Display the files and directories
     - `-s` or `--size`: Display the size of the files and directories
     - `-d` or `--date`: Display the date of the files and directories
     - `-v` or `--verbose`: Display the size and date of the files and directories
