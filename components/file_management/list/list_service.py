@@ -55,7 +55,7 @@ def convert_size(size_bytes):
     s = round(size_bytes / p, 2)
     return f"{s} {size_name[i]}"
 
-def show_size(directory):
+def list_size(directory):
     """
     Show file sizes in a directory
     :param directory:
